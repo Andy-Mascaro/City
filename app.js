@@ -16,6 +16,21 @@ let conditionsCounter = 0;
 let housingCounter = 0;
 let locationCounter = 0;
 
+conditionsSelect.addEventListener('change' (e) => {
+  const value = e.target.value;
+  conditionsImage.src =`./assets/conditions-${value}.jpeg`;
+  conditionsCounter++;
+  displayStats();
+});
+
+housingSelect.addEventListener('change' (e) => {
+  const value = e.target.value;
+  housingImage.src =`.assets/housing-${value}.jpeg`;
+  housingCounter++;
+  displayStats();
+
+});
+
 
 
 
