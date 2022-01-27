@@ -1,4 +1,4 @@
-import { creatCounterString} from './utils.js';
+import { creatCountString} from './utils.js';
 // import functions and grab DOM elements
 const conditionsSelect = document.getElementById('conditions-select');
 const housingSelect = document.getElementById('housing-select');
@@ -11,12 +11,12 @@ const reset = document.getElementById('reset-slogans');
 
 const results = document.getElmentsById('results');
 
-let slogan = []
+let slogans = []
 let conditionsCounter = 0;
 let housingCounter = 0;
 let locationCounter = 0;
 
-conditionsSelect.addEventListener('change' (e) => {
+conditionsSelect.addEventListener('change', (e) => {
   const value = e.target.value;
   conditionsImage.src =`./assets/conditions-${value}.jpeg`;
   conditionsCounter++;
@@ -32,7 +32,20 @@ housingSelect.addEventListener('change' (e) => {
 });
 
 
+locationSelect.addEventListener('change' (e) => {
+  const value = e.target.value;
+  locationImage.src =`.assets/location-${value}.jpeg`;
+  locationCounter++;
+  displayStats();
 
+});
+
+function displayStats(){
+const countString = creatCountString(conditionsCounter, housingCounter, locationCounter);
+results.textContent = countString;
+
+
+}
 
 
 // let state
