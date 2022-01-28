@@ -11,8 +11,8 @@ const locationEl = document.getElementById('location');
 const sloganEl = document.getElementById('slogan');
 const sloganInput = document.getElementById('slogan-input');
 const sloganButton = document.getElementById('slogan-btn');
-const reset = document.getElementById('reset-slogans');
-const sloganList = document.getElementById('slogan-list');
+//const reset = document.getElementById('reset-slogans');
+//const sloganList = document.getElementById('slogan-list');
 const results = document.getElementsById('results');
 const slogans = [];
 
@@ -54,13 +54,13 @@ sloganButton.addEventListener('click', () => {
 });
 
 
-reset.addEventListener('click', () => {
-    slogans = [];
-    sloganList.textContent = '';
+//*reset.addEventListener('click', () => {
+    //*slogans = [];
+    //*sloganList.textContent = '';
     
 
 
-});
+//*});
 
 function displayStats(){
     const countString = createCountString(conditionsCounter, housingCounter, locationCounter);
