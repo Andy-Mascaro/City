@@ -22,14 +22,14 @@ let locationCounter = 0;
 
 conditionsSelect.addEventListener('change', () => {
     const value = conditionsSelect.value;
-    conditionsEl.style.backgroundImage = `url("./assets/conditions-${value}-.jpeg")`;
+    conditionsEl.style.backgroundImage = `url("./assets/${value}-conditions.jpeg")`;
     conditionsCounter++;
     displayStats();
 });
 
 housingSelect.addEventListener('change', () => {
     const value = housingSelect.value;
-    housingEl.style.backgroundImage = `url("./assets/conditions-${value}-.jpeg")`;
+    housingEl.style.backgroundImage = `url("./assets/${value}-.jpeg")`;
     housingCounter++;
     displayStats();
 
@@ -38,7 +38,7 @@ housingSelect.addEventListener('change', () => {
 
 locationSelect.addEventListener('change', () => {
     const value = locationSelect.value;
-    locationEl.style.backgroundImage = `url("./assets/conditions-${value}-.jpeg")`;
+    locationEl.style.backgroundImage = `url("./assets/${value}-.jpeg")`;
     locationCounter++;
     displayStats();
 
