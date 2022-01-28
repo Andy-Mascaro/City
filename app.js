@@ -20,25 +20,25 @@ let conditionsCounter = 0;
 let housingCounter = 0;
 let locationCounter = 0;
 
-conditionsSelect.addEventListener('change', () => {
-    const value = conditionsSelect.value;
-    conditionsEl.style.backgroundImage = `url("./assets/${value}-conditions.jpeg")`;
+conditionsSelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    conditionsEl.src = `assets/${value}-conditions.jpeg`;
     conditionsCounter++;
     displayStats();
 });
 
-housingSelect.addEventListener('change', () => {
-    const value = housingSelect.value;
-    housingEl.style.backgroundImage = `url("./assets/${value}-.jpeg")`;
+housingSelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    housingEl.src = `assets/${value}-housing.jpeg`;
     housingCounter++;
     displayStats();
 
 });
 
 
-locationSelect.addEventListener('change', () => {
-    const value = locationSelect.value;
-    locationEl.style.backgroundImage = `url("./assets/${value}-.jpeg")`;
+locationSelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    locationEl.src = `assets/${value}-location.jpeg`;
     locationCounter++;
     displayStats();
 
