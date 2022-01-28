@@ -1,4 +1,4 @@
-import { creatCountString } from './utils.js';
+import { createCountString } from './utils.js';
 // import functions and grab DOM elements
 const conditionsSelect = document.getElementById('conditions-select');
 const housingSelect = document.getElementById('housing-select');
@@ -52,6 +52,8 @@ sloganButton.addEventListener('click', () => {
 
 
 });
+
+
 reset.addEventListener('click', () => {
     slogans = [];
     sloganList.textContent = '';
@@ -61,7 +63,7 @@ reset.addEventListener('click', () => {
 });
 
 function displayStats(){
-    const countString = creatCountString(conditionsCounter, housingCounter, locationCounter);
+    const countString = createCountString(conditionsCounter, housingCounter, locationCounter);
     results.textContent = countString;
 
 
