@@ -1,48 +1,81 @@
-import { creatCountString} from './utils.js';
+import { creatCountString } from './utils.js';
 // import functions and grab DOM elements
 const conditionsSelect = document.getElementById('conditions-select');
 const housingSelect = document.getElementById('housing-select');
 const locationSelect = document.getElementById('location-select');
 
+const conditionsEl = document.getElementById('conditions');
+const housingEl = document.getElementById('housing');
+const locationEl = document.getElementById('location');
+
+const sloganEl = document.getElementById('slogan');
 const sloganInput = document.getElementById('slogan-input');
-const sloganBtn = document.getElementById('slogan-btn');
-const sloganList = document.getElementById('slogan-list');
+const sloganButton = document.getElementById('slogan-btn');
 const reset = document.getElementById('reset-slogans');
+const sloganList = document.getElementById('slogan-list');
+const results = document.getElementsById('results');
+const slogans = [];
 
-const results = document.getElmentsById('results');
-
-let slogans = []
 let conditionsCounter = 0;
 let housingCounter = 0;
 let locationCounter = 0;
 
-conditionsSelect.addEventListener('change', (e) => {
-  const value = e.target.value;
-  conditionsImage.src =`./assets/conditions-${value}.jpeg`;
-  conditionsCounter++;
-  displayStats();
+conditionsSelect.addEventListener('change', () => {
+    const value = conditionsSelect.value;
+    conditionsEl.style.backgroundImage = `url("./assets/conditions-${value}-.jpeg")`;
+    conditionsCounter++;
+    displayStats();
 });
 
-housingSelect.addEventListener('change' (e) => {
-  const value = e.target.value;
-  housingImage.src =`.assets/housing-${value}.jpeg`;
-  housingCounter++;
-  displayStats();
+housingSelect.addEventListener('change', () => {
+    const value = housingSelect.value;
+    housingEl.style.backgroundImage = `url("./assets/conditions-${value}-.jpeg")`;
+    housingCounter++;
+    displayStats();
 
 });
 
 
-locationSelect.addEventListener('change' (e) => {
-  const value = e.target.value;
-  locationImage.src =`.assets/location-${value}.jpeg`;
-  locationCounter++;
-  displayStats();
+locationSelect.addEventListener('change', () => {
+    const value = locationSelect.value;
+    locationEl.style.backgroundImage = `url("./assets/conditions-${value}-.jpeg")`;
+    locationCounter++;
+    displayStats();
+
+});
+
+sloganButton.addEventListener('click', () => {
+    const slogan = sloganInput.value;
+    slogan.push(slogan);
+    displaySlogan();
+    sloganInput.value = '';
+
+
+});
+reset.addEventListener('click', () => {
+    slogans = [];
+    sloganList.textContent = '';
+    
+
 
 });
 
 function displayStats(){
-const countString = creatCountString(conditionsCounter, housingCounter, locationCounter);
-results.textContent = countString;
+    const countString = creatCountString(conditionsCounter, housingCounter, locationCounter);
+    results.textContent = countString;
+
+
+}
+
+function displaySlogan() {
+    sloganEl.textContent = '';
+    for (let slogan of slogans) {
+
+        const ul = document.createElement(ul);
+        ul.textContent = slogan;
+        sloganEl.append(ul);
+    }
+  
 
 
 }
