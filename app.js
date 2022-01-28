@@ -1,4 +1,4 @@
-import { createCountString } from './utils.js';
+import { createCountString } from './test/utils.js';
 // import functions and grab DOM elements
 const conditionsSelect = document.getElementById('conditions-select');
 const housingSelect = document.getElementById('housing-select');
@@ -8,13 +8,13 @@ const conditionsEl = document.getElementById('conditions');
 const housingEl = document.getElementById('housing');
 const locationEl = document.getElementById('location');
 
-const sloganEl = document.getElementById('slogan');
+
 const sloganInput = document.getElementById('slogan-input');
 const sloganButton = document.getElementById('slogan-btn');
-//const reset = document.getElementById('reset-slogans');
-//const sloganList = document.getElementById('slogan-list');
-const results = document.getElementsById('results');
-const slogans = [];
+const reset = document.getElementById('reset-slogans');
+const sloganList = document.getElementById('slogan-list');
+const results = document.getElementById('results');
+let slogans = [];
 
 let conditionsCounter = 0;
 let housingCounter = 0;
@@ -46,7 +46,7 @@ locationSelect.addEventListener('change', () => {
 
 sloganButton.addEventListener('click', () => {
     const slogan = sloganInput.value;
-    slogan.push(slogan);
+    slogans.push(slogan);
     displaySlogan();
     sloganInput.value = '';
 
@@ -54,13 +54,13 @@ sloganButton.addEventListener('click', () => {
 });
 
 
-//*reset.addEventListener('click', () => {
-    //*slogans = [];
-    //*sloganList.textContent = '';
+reset.addEventListener('click', () => {
+    slogans = [];
+    sloganList.textContent = '';
     
 
 
-//*});
+});
 
 function displayStats(){
     const countString = createCountString(conditionsCounter, housingCounter, locationCounter);
@@ -70,12 +70,13 @@ function displayStats(){
 }
 
 function displaySlogan() {
-    sloganEl.textContent = '';
+    sloganList.textContent = '';
     for (let slogan of slogans) {
 
-        const ul = document.createElement(ul);
-        ul.textContent = slogan;
-        sloganEl.append(ul);
+        const li = document.createElement('li');
+        li.textContent = slogan;
+        sloganList.append(li);
+        
     }
   
 
