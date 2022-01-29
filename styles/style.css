@@ -2,25 +2,25 @@
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
+   /* --color1: white;
     --color2: white;
     --color3: white;
     --color4: white;
     --color5: white;
     
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
+     https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
-    /* --color1: hsla(349, 69%, 76%, 1);
+      /*--color1: hsla(349, 69%, 76%, 1);
     --color2: hsla(207, 67%, 44%, 1);
     --color3: hsla(200, 61%, 56%, 1);
     --color4: hsla(187, 41%, 94%, 1);
     --color5: hsla(170, 28%, 95%, 1); */
 
-    /* --color1: hsla(45, 86%, 83%, 1);
+    --color1: hsla(45, 86%, 83%, 1);
     --color2: hsla(135, 65%, 98%, 1);
     --color3: hsla(315, 37%, 86%, 1);
     --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
+    --color5: hsla(224, 40%, 79%, 1); 
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
@@ -28,7 +28,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: var(--color5);
 }
 
  main {
@@ -36,6 +36,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-bottom: calc(var(--footer-height));
 }
 
@@ -49,14 +50,20 @@ header {
 
 
 h2 {
+    text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
     color: blueviolet
 }
 
 h3 {
+    text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.results {
+    text-align: center;
 }
 
 .gutter-right {
@@ -83,7 +90,7 @@ footer {
 }
 
 #con {
-    color:coral;
+    color:rgb(109, 28, 8);
     font-weight: bold;
 }
 
@@ -93,7 +100,7 @@ footer {
 }
 
 #loc {
-    color:rgb(245, 144, 105);
+    color:rgb(10, 90, 53);
     font-weight: bold;
 }
 
@@ -102,11 +109,46 @@ img {
     border-radius: 10px;
     padding: 1px;
     object-fit: fill;
-    width: 300px;
-    height: 300px;
-    grid-template-columns: repeat(3, 1fr);
-
+    width: 500px;
+    height: 500px;
+    display: center;
 }
+  
+  .details {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.select {
+    display: fill;
+    flex-direction: column;
+    align-items: space-between;
+    margin: 20px;
+    text-align:center
+}
+
+/*.select img {
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: 5px solid black;
+    
+}
+
+
+
+/*img { 
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1px;
+    object-fit: fill;
+    width: 500px;
+    height: 500px;
+    display: center;
+}
+   
+
 
 /*section {
     display: grid;
