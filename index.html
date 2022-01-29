@@ -13,53 +13,84 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
-    </header>
+  
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
+            
+            
+            <h2>
+                Pick Your Destination!
+            </h2>
+            <section class="details">
+                <div class="select" id="conditions-select">
+                    <label id ="con">Conditions</label>
+                    <select>
+                        <option value="1">Sunny</option>
+                        <option value="2">Rainy</option>
+                        <option value="3">Dry</option>
+                        <option value="4">Cold</option>
+                    </select>
+                    
+                    
+                 </div>
+                 <img id="conditions" src="assets\1-conditions.jpeg" />
+
+
+
+                 <div class="select">
+                    <label id="house">Housing</label>
+                    <select id="housing-select">
+                        <option value="1">Big</option>
+                        <option value="2">Tiny</option>
+                        <option value="3">Glass</option>
+                        <option value="4">Stone</option>
+                    </select>
+                    
+
+                 </div>
+                 <img id="housing" src="assets\1-housing.jpeg" />
+
+                 <div class="select" > 
+                    <label id="loc">Location</label>
+                    <select id="location-select">
+                        <option value="1">City</option>
+                        <option value="2">Forest</option>
+                        <option value="3">Desert</option>
+                        <option value="4">Jungle</option>
+                    </select>
+                </div>
+                <img id="location" src="assets\1-location.jpeg" />
+
+             </section>
+
+             <section id="results"></section>
+             
+                    <h3>City Slogans</h3>
+
+                    
+
+                    <div class="select" id="slogan">
+                        <input id="slogan-input" type="text" />
+                        <button id="slogan-btn">Add</button>
+                        <ul id="slogan-list"></ul>
+                        <button id="reset-slogans">Reset Slogans</button>
+                        
+                    </div>
+
+                    
+                    <div id="stats"> 
+                        <p id="report"></p>
+                        <div id="slogans">
+
+                    </div>
+                    
+
+                </div>
+            </section>
+
+                           
+        
 
         </section>
     </main>
