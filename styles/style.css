@@ -64,6 +64,8 @@ h3 {
 
 .results {
     text-align: center;
+    font-weight: bold;
+    color:cadetblue
 }
 
 .gutter-right {
@@ -110,8 +112,10 @@ img {
     padding: 1px;
     object-fit: fill;
     width: 500px;
-    height: 500px;
-    display: center;
+    height: 300px;
+    display: inline-block;
+    
+    
 }
   
   .details {
@@ -127,6 +131,7 @@ img {
     margin: 20px;
     text-align:center
 }
+
 
 /*.select img {
     margin-top: 10px;
